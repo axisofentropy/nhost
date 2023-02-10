@@ -103,6 +103,7 @@ services:
     environment:
       PORT: "8888"
       GRAPHQL_PORT: "8080"
+      CONSOLE_PORT: "8080"
       AUTH_PORT: "4000"
       STORAGE_PORT: "8000"
       FUNCTIONS_PORT: "3000"
@@ -111,7 +112,7 @@ services:
       MAILHOG_PORT: "8025"
       MINIO_PORT: "8484"
     volumes:
-      - ./examples/docker-compose/nginx:/etc/nginx/templates
+      - ./examples/docker-compose/nginx/:/etc/nginx/templates
     deploy:
       resources:
         limits:
